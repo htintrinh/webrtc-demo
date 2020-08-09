@@ -3,10 +3,10 @@ const app = express();
 const server = require("http").Server(app);
 const uuid = require("uuid");
 const io = require("socket.io")(server);
-const peer = require('peer');
-const peerServer = peer.ExpressPeerServer(server, {
-    debug: true
-})
+// const peer = require('peer');
+// const peerServer = peer.ExpressPeerServer(server, {
+//     debug: true
+// })
 
 io.on("connection", (socket) => {
   console.log("Socket connect");
